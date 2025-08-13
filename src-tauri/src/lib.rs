@@ -1,4 +1,4 @@
-mod hook;
+// mod hook;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
@@ -11,7 +11,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![greet])
-        .setup(|app| {
+        .setup(|_app| {
             #[cfg(debug_assertions)]
             {
                 use tauri::Manager;
@@ -19,7 +19,7 @@ pub fn run() {
                 let main_window = app.get_webview_window("main").unwrap();
                 // main_window.open_devtools();
                 // TODO: finish front-end implementing of https://github.com/Xinyu-Li-123/tauri-clickthrough-demo to allow drag/resizing captions window
-                hook::start_global_mouse_stream(main_window);
+                // hook::start_global_mouse_stream(main_window);
             }
             Ok(())
         })
