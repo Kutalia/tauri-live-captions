@@ -7,6 +7,7 @@
     "core:default",
     "opener:default",
     "core:window:allow-set-ignore-cursor-events",
-    "updater:default"
+    "updater:default",
+    "dialog:default"
   ]
 }
