@@ -1,6 +1,6 @@
 [package]
 name = "tauri-live-captions"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Tauri Live Captions App"
 authors = ["Kutalia"]
 edition = "2021"
